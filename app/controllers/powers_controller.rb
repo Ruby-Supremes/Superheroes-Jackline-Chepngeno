@@ -20,7 +20,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :validation_error
 
     private
     def power_params
-        params.permit(:name, :description)
+        params.permit(:description)
     end
     
     def find_power

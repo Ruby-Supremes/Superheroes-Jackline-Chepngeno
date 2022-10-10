@@ -1,8 +1,8 @@
 class HeroPowersController < ApplicationController
 rescue_from ActiveRecord::RecordInvalid, with: :validation_error
     def create
-        hero = HeroPower.create!(heropower_param)
-        render json: hero,  status: 201
+      hero_power = HeroPower.create!(heropower_param)
+      render json: hero_power.hero, status: :created
       end
     
       private 
